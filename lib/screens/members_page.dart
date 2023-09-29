@@ -67,7 +67,11 @@ class NumbersPage extends StatelessWidget {
         body: ListView.builder(
           itemCount: data.length,
           itemBuilder: (context, index){
+<<<<<<< HEAD
             return NumberItem(number: data[index],);
+=======
+            NumberItem(number: data[index],);
+>>>>>>> db088d6dc86067a10c827a411bb557a8d3f4f6a7
           } ,
         ),
       ),

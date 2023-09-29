@@ -4,6 +4,7 @@ import 'package:toku_app/models/number.dart';
 class NumberItem extends StatelessWidget {
   const NumberItem({super.key, required this.number});
   final Number number;
+  //final void Function()? onTap;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -38,12 +39,15 @@ class NumberItem extends StatelessWidget {
           const Spacer(
             flex: 1,
           ),
-          Padding(
-            padding: const EdgeInsets.only(right: 16),
-            child: Icon(
-              Icons.play_arrow,
-              color: Colors.white,
-              size: 32,
+          GestureDetector(
+            onTap: (){},
+            child: const Padding(
+              padding: EdgeInsets.only(right: 16),
+              child: Icon(
+                Icons.play_arrow,
+                color: Colors.white,
+                size: 32,
+              ),
             ),
           ),
         ],
