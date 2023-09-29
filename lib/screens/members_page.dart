@@ -64,8 +64,11 @@ class NumbersPage extends StatelessWidget {
           backgroundColor: const Color(0xff46322b),
           title: const Text('Numbers'),
         ),
-        body: ListView(
-          children: getList(data),
+        body: ListView.builder(
+          itemCount: data.length,
+          itemBuilder: (context, index){
+            NumberItem(number: data[index],);
+          } ,
         ),
       ),
     );
