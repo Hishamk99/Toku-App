@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-
 import '../widgets/category_item.dart';
+import 'members_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -14,11 +14,16 @@ class HomePage extends StatelessWidget {
           backgroundColor: const Color(0xff46322b),
           title: const Text('Toku'),
         ),
-        body: const Column(
+        body: Column(
           children: [
             Category(
               text: 'Members',
-              color: Color(0xffef9235),
+              color: const Color(0xffef9235),
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (BuildContext context){
+                  return MembersPage();
+                }));
+              },
             ),
             Category(
               text: 'FamilyMembers',
