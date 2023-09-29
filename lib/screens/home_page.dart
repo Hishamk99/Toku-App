@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../widgets/category_iem.dart';
+import '../widgets/category_item.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
