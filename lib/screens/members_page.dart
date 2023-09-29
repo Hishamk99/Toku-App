@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:toku_app/models/number.dart';
+import 'package:toku_app/widgets/number_item.dart';
 
 class NumbersPage extends StatelessWidget {
   const NumbersPage({super.key});
-  final Number one = const Number(
-      image: 'assets/images/numbers/number_one.png',
-      enName: 'One',
-      jpName: 'Ichi');
   final List<Number> data = const [
     Number(
       image: "assets/images/numbers/number_one.png",
@@ -67,12 +64,19 @@ class NumbersPage extends StatelessWidget {
           backgroundColor: const Color(0xff46322b),
           title: const Text('Numbers'),
         ),
-        body: Column(
-          children: [
-            
-          ],
+        body: ListView(
+          children: getList(data),
         ),
       ),
     );
+  }
+  List<Widget>getList(List<Number> numbers)
+  {
+    List<NumberItem> itemList = [];
+    for(int i = 0; i < numbers.length; i++)
+    {
+      itemList.add(NumberItem(number: numbers[i]));
+    }
+    return itemList;
   }
 }
