@@ -17,11 +17,11 @@ class HomePage extends StatelessWidget {
         body: Column(
           children: [
             Category(
-              text: 'Members',
+              text: 'Numbers',
               color: const Color(0xffef9235),
               onTap: (){
                 Navigator.push(context, MaterialPageRoute(builder: (BuildContext context){
-                  return MembersPage();
+                  return NumbersPage();
                 }));
               },
             ),
