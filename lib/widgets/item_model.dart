@@ -1,15 +1,16 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
-import 'package:toku_app/models/number.dart';
+import 'package:toku_app/models/item_model.dart';
 
-class NumberItem extends StatelessWidget {
-  const NumberItem({super.key, required this.number});
-  final Number number;
+class Item extends StatelessWidget {
+  const Item({super.key, required this.number , required this.color});
+  final ItemModel number;
+  final Color color;
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 100,
-      color: const Color(0xffef9235),
+      color: color,
       child: Row(
         children: [
           Container(

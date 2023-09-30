@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../widgets/category_item.dart';
-import 'members_page.dart';
+import 'numbers_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -19,21 +19,22 @@ class HomePage extends StatelessWidget {
             Category(
               text: 'Numbers',
               color: const Color(0xffef9235),
-              onTap: (){
-                Navigator.push(context, MaterialPageRoute(builder: (BuildContext context){
-                  return NumbersPage();
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (BuildContext context) {
+                  return const NumbersPage();
                 }));
               },
             ),
-            Category(
+            const Category(
               text: 'FamilyMembers',
               color: Color(0xff558b37),
             ),
-            Category(
+            const Category(
               text: 'Colors',
               color: Color(0xff79359f),
             ),
-            Category(
+            const Category(
               text: 'Phrases',
               color: Color(0xff50adc7),
             ),
