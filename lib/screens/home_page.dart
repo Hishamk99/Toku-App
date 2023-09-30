@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:toku_app/screens/color_page.dart';
 import 'package:toku_app/screens/family_members.dart';
+import 'package:toku_app/screens/phrases_page.dart';
 import '../widgets/category_item.dart';
 import 'numbers_page.dart';
 
@@ -48,9 +49,15 @@ class HomePage extends StatelessWidget {
                 }));
               }
             ),
-            const Category(
+            Category(
               text: 'Phrases',
-              color: Color(0xff50adc7),
+              color: const Color(0xff50adc7),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (BuildContext context) {
+                  return const PhrasesPage();
+                }));
+              }
             ),
           ],
         ),

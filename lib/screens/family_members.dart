@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../models/item_model.dart';
-import '../widgets/item_model.dart';
+import '../widgets/item.dart';
 
 class FamilyMembers extends StatelessWidget {
   const FamilyMembers({super.key});
@@ -69,7 +69,7 @@ class FamilyMembers extends StatelessWidget {
             itemBuilder: (context, index) {
               return Item(
                 color : const Color(0xFF558b37),
-                number: data[index],
+                item: data[index],
               );
             }),
       ),

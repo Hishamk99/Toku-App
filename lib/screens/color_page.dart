@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:toku_app/models/item_model.dart';
-import '../widgets/item_model.dart';
+import '../widgets/item.dart';
 
 class ColorPage extends StatelessWidget {
   const ColorPage({super.key});
@@ -59,7 +59,7 @@ class ColorPage extends StatelessWidget {
             itemBuilder: (context, index) {
               return Item(
                 color: const Color(0xff79359f),
-                number: data[index],
+                item: data[index],
               );
             }),
       ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:toku_app/models/item_model.dart';
-import 'package:toku_app/widgets/item_model.dart';
+import 'package:toku_app/widgets/item.dart';
 
 class NumbersPage extends StatelessWidget {
   const NumbersPage({super.key});
@@ -79,7 +79,7 @@ class NumbersPage extends StatelessWidget {
             itemBuilder: (context, index) {
               return Item(
                 color : const Color(0xffef9235),
-                number: data[index],
+                item: data[index],
               );
             }),
       ),
@@ -89,7 +89,7 @@ class NumbersPage extends StatelessWidget {
   List<Widget> getList(List<ItemModel> numbers) {
     List<Item> itemList = [];
     for (int i = 0; i < numbers.length; i++) {
-      itemList.add(Item(color: const Color(0xffef9235), number: numbers[i]));
+      itemList.add(Item(color: const Color(0xffef9235), item: numbers[i]));
     }
     return itemList;
   }
