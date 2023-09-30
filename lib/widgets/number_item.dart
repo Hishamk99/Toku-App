@@ -1,10 +1,10 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:toku_app/models/number.dart';
 
 class NumberItem extends StatelessWidget {
   const NumberItem({super.key, required this.number});
   final Number number;
-  //final void Function()? onTap;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -39,11 +39,14 @@ class NumberItem extends StatelessWidget {
           const Spacer(
             flex: 1,
           ),
-          GestureDetector(
-            onTap: (){},
-            child: const Padding(
-              padding: EdgeInsets.only(right: 16),
-              child: Icon(
+          Padding(
+            padding: const EdgeInsets.only(right: 16),
+            child: IconButton(
+              onPressed: () {
+                  final player = AudioPlayer();
+                  player.play(AssetSource(number.sound));
+              },
+              icon: const Icon(
                 Icons.play_arrow,
                 color: Colors.white,
                 size: 32,
